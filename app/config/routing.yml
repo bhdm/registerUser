@@ -1,0 +1,18 @@
+crm_admin:
+    resource: "@CrmAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+crm_main:
+    resource: "@CrmMainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+_security_check:
+    pattern:  /login_submit
+
+_security_logout:
+    pattern:  /logout
