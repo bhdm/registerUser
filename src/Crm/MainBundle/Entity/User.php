@@ -19,16 +19,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 class User extends BaseEntity implements UserInterface, EquatableInterface, \Serializable
 {
     /**
-     * @ORM\OneToOne(targetEntity="Driver", mappedBy="user")
-     */
-    protected $driver;
-
-    /**
-     * @ORM\OneToOne(targetEntity="Company", mappedBy="user")
-     */
-    protected $company;
-
-    /**
      * @Assert\NotBlank( message = "Поле фамилия обязательно для заполнения" )
      * @Assert\Length( max = "35", maxMessage = "Максимум  35 символов")
      * @ORM\Column(type="string", length=100)
